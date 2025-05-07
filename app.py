@@ -11,8 +11,7 @@ model_dir = "./saved_models/u2net"
 model_path = os.path.join(model_dir, "u2net.pth")
 
 # رابط Google Drive الكامل للنموذج
-gdrive_url = "https://drive.google.com/uc?id=1pLzdyE2-XXMpVfUbuQp7Vn97wzeJSqyS"
-
+gdrive_url = "https://drive.google.com/uc?id=1TkSXyOSimHA4uMBP_vJWG_T7wdUgKaeV"
 def download_model_if_needed():
     if not os.path.exists(model_path):
         print("[INFO] Model not found. Downloading from Google Drive...")

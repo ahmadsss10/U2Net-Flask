@@ -10,14 +10,14 @@ app = Flask(__name__)
 model_dir = "./saved_models/u2net"
 model_path = os.path.join(model_dir, "u2net.pth")
 
-# رابط Google Drive الخاص بالنموذج
-gdrive_id = "1pLzdyE2-XXMpVfUbuQp7Vn97wzeJSqyS"
+# رابط Google Drive الكامل للنموذج
+gdrive_url = "https://drive.google.com/uc?id=1pLzdyE2-XXMpVfUbuQp7Vn97wzeJSqyS"
 
 def download_model_if_needed():
     if not os.path.exists(model_path):
         print("[INFO] Model not found. Downloading from Google Drive...")
         os.makedirs(model_dir, exist_ok=True)
-        gdown.download(id=gdrive_id, output=model_path, quiet=False)
+        gdown.download(gdrive_url, output=model_path, quiet=False)
     else:
         print("[INFO] Model already exists. Skipping download.")
 

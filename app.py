@@ -21,7 +21,7 @@ def download_model_if_needed():
         print("[INFO] Model already exists. Skipping download.")
 
 # تحميل النموذج عند بدء التطبيق
-download_model_if_needed()
+
 
 # تحميل النموذج إلى الذاكرة
 net = U2NET(3, 1)
